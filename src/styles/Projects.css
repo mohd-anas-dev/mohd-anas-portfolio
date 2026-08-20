@@ -1,0 +1,522 @@
+.Projects {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProjectHeader {
+    width: 100%;
+    min-height: 20vh;
+    background-color: #171616;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+
+    h1 {
+        padding: 0 .50em 0em 1.5em;
+        font-size: 200px;
+        text-transform: uppercase;
+        letter-spacing: -9%;
+        line-height: 200px;
+    }
+}
+
+.ProjectsContainer {
+    background-color: #fff;
+    height: fit-content;
+    width: 100%;
+    min-height: 120vh;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    .ProjectsContainerOne {
+        display: flex;
+        height: 25vh;
+        border-bottom: solid 2px #171616;
+        /* cursor: pointer; */
+        color: #171616;
+
+        text-decoration: none;
+
+        .LeftProjectsContainerOne {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .LeftProjectsNumber {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                h1 {
+                    font-size: 200px;
+                    line-height: 140px;
+                    letter-spacing: -7%;
+                    color: #171616
+                }
+            }
+
+            .LeftProjectType {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                svg {
+                    width: 45px;
+                    height: 45px;
+                    stroke-width: 2.5px;
+                    transition: all 0.37s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+                    stroke: #171616;
+                    padding: 0.25em;
+                }
+
+                h1 {
+                    padding: 0em 0.25em;
+                    display: flex;
+                    gap: 0.25em;
+                    font-size: 30px;
+                    font-weight: 800;
+                    color: #171616;
+                    letter-spacing: -8%;
+
+                    span {
+                        text-transform: lowercase;
+                    }
+                }
+
+            }
+        }
+
+        .RightProjectsContainerOne {
+            width: 100%;
+            display: flex;
+            gap: 1em;
+            padding: 0.50em;
+
+
+            .RightProjectsContainerOneDetails {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: justify;
+
+                .ProjectHeaderTitle {
+                    h1 {
+                        text-transform: uppercase;
+                        letter-spacing: -8%;
+                    }
+                }
+
+                .ProjectDesc {
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: -5%;
+                    }
+                }
+            }
+
+            .RightProjectsContainerOneImages {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease 0s;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+.ProjectsContainerOne {
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+}
+
+
+.RightProjectsContainerOneImages {
+    overflow: hidden;
+
+    img {
+        transform: translateY(120%);
+        transition: all 0.37s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+    }
+}
+
+.ProjectsContainerOne:hover {
+    background-color: #171616;
+    color: white;
+    cursor: pointer;
+
+    .LeftProjectsContainerOne {
+        .LeftProjectsNumber {
+            h1 {
+                color: white
+            }
+        }
+
+        .LeftProjectType {
+            svg {
+                stroke: white;
+                transform: rotate(45deg);
+            }
+        }
+
+        .LeftProjectType {
+            h1 {
+                color: white;
+            }
+        }
+    }
+
+    .RightProjectsContainerOneImages {
+        img {
+            transform: translateY(0);
+        }
+    }
+
+
+}
+
+
+
+
+@media (max-width: 599px) {
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    .Projects {
+        width: 100%;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .ProjectHeader {
+        width: 100%;
+        min-height: 15dvh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .ProjectHeader h1 {
+        width: max-content;
+
+        margin: 0;
+
+        padding: 0em;
+        font-size: clamp(70px, 30vw, 160px);
+
+        line-height: 0.85;
+
+        letter-spacing: -0.08em;
+
+        white-space: nowrap;
+        text-align: center;
+    }
+
+
+    /* =========================================
+       PROJECT CONTAINER
+    ========================================= */
+
+    .ProjectsContainer {
+        width: 100%;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* =========================================
+       PROJECT CARD
+    ========================================= */
+
+    .ProjectsContainer .ProjectsContainerOne {
+        width: 100%;
+        height: auto;
+
+        min-height: auto;
+
+        padding: 1.25em;
+
+        display: flex;
+        flex-direction: column;
+
+        border-bottom: 2px solid #171616;
+
+        gap: 1.5em;
+
+        color: #171616;
+
+        text-decoration: none;
+    }
+
+
+    /* =========================================
+       LEFT SECTION
+    ========================================= */
+
+    .ProjectsContainerOne .LeftProjectsContainerOne {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: 1em;
+    }
+
+
+    /* =========================================
+       NUMBER
+    ========================================= */
+
+    .LeftProjectsContainerOne .LeftProjectsNumber {
+        width: auto;
+        height: auto;
+
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .LeftProjectsContainerOne .LeftProjectsNumber h1 {
+        margin: 0;
+
+        font-size: clamp(70px, 20vw, 100px);
+
+        line-height: 0.75;
+
+        letter-spacing: -0.08em;
+
+        font-weight: 500;
+    }
+
+
+    /* =========================================
+       PROJECT TYPE
+    ========================================= */
+
+    .LeftProjectsContainerOne .LeftProjectType {
+        width: auto;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        align-items: flex-end;
+
+        gap: 2em;
+    }
+
+
+    .LeftProjectType svg {
+        width: 30px !important;
+        height: 30px !important;
+
+        padding: 0.15em !important;
+
+        stroke-width: 2.5px;
+    }
+
+
+    .LeftProjectType h1 {
+        margin: 0;
+
+        padding: 0 !important;
+
+        font-size: clamp(15px, 4vw, 19px) !important;
+
+        line-height: 1;
+
+        font-weight: 700 !important;
+
+        letter-spacing: -0.05em !important;
+
+        text-align: right;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================================
+       RIGHT SECTION
+    ========================================= */
+
+    .ProjectsContainerOne .RightProjectsContainerOne {
+        width: 100%;
+
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5em;
+    }
+
+
+    /* =========================================
+       DETAILS
+    ========================================= */
+
+    .RightProjectsContainerOne .RightProjectsContainerOneDetails {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.75em;
+
+        text-align: left;
+    }
+
+
+    /* TITLE */
+
+    .RightProjectsContainerOneDetails .ProjectHeaderTitle h1 {
+        margin: 0;
+
+        font-size: clamp(32px, 9vw, 48px);
+
+        line-height: 0.9;
+
+        letter-spacing: -0.07em;
+
+        font-weight: 500;
+    }
+
+
+    /* DESCRIPTION */
+
+    .RightProjectsContainerOneDetails .ProjectDesc p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 14px;
+
+        line-height: 1.35;
+
+        font-weight: 500;
+
+        letter-spacing: -0.02em;
+    }
+
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .ProjectsContainerOne .RightProjectsContainerOneImages {
+        width: 100%;
+        height: auto;
+
+        min-height: 220px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    .RightProjectsContainerOneImages img {
+        width: 100%;
+        height: 100%;
+
+        min-height: 220px;
+
+        object-fit: contain;
+
+        transform: translateY(0);
+
+        transition: none;
+    }
+
+
+    /* =========================================
+       HOVER
+    ========================================= */
+
+    .ProjectsContainerOne:hover {
+        background-color: #171616;
+
+        color: white;
+    }
+
+    .ProjectsContainerOne:hover
+    .LeftProjectsContainerOne
+    .LeftProjectsNumber h1 {
+        color: white;
+    }
+
+    .ProjectsContainerOne:hover
+    .LeftProjectsContainerOne
+    .LeftProjectType svg {
+        stroke: white;
+
+        transform: rotate(45deg);
+    }
+
+    .ProjectsContainerOne:hover
+    .LeftProjectsContainerOne
+    .LeftProjectType h1 {
+        color: white;
+    }
+
+    .ProjectsContainerOne:hover
+    .RightProjectsContainerOneImages img {
+        transform: translateY(0);
+    }
+
+}
+
+
+
+
+
+
+
+

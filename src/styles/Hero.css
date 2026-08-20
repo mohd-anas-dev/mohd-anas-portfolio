@@ -1,0 +1,953 @@
+.Hero {
+    visibility: hidden;
+}
+
+.Hero.HeroReady {
+    visibility: visible;
+}
+
+
+.Hero {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+
+}
+
+.HeroContainer {
+    visibility: "visible";
+}
+
+
+.HeroContainer {
+
+    width: 100%;
+    min-height: 120dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .HeroContainerUpper {
+        display: flex;
+        flex-direction: column;
+
+        .HeroContainerRole {
+            width: 100%;
+            padding: 0em 2em;
+            display: flex;
+            flex-direction: column;
+            line-height: 0.8;
+            -webkit-user-select: none;
+            user-select: none;
+
+            .HeroContainerFirstRol {
+                width: 100%;
+
+                h1 {
+                    font-size: 250px;
+                    font-weight: 500;
+                    letter-spacing: -8%;
+                    text-transform: uppercase;
+                }
+            }
+
+            .HeroContainerLastRol {
+                width: 100%;
+
+                h1 {
+                    padding: 0em 0.05em 0em 0em;
+                    font-size: 250px;
+                    letter-spacing: -8%;
+                    text-transform: uppercase;
+                    transform-origin: left;
+                    font-weight: 500;
+                    text-align: right;
+                }
+
+            }
+        }
+
+        .HeroContainerDetails {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0em 2em;
+
+            .LeftHeroContainerDetails {
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                gap: 1.5em;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: -4%;
+                }
+
+                button {
+                    cursor: pointer;
+                    width: 150px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fe4d1d;
+                    color: white;
+                    letter-spacing: -6%;
+                    border: transparent;
+                    position: relative;
+                    overflow: hidden;
+                    gap: 0.75em;
+                    isolation: isolate;
+                    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+                    transform: scaleY(0);
+
+                    h1 {
+                        font-size: 12px;
+                        font-weight: 400;
+                        z-index: 3;
+                        text-transform: uppercase;
+                    }
+
+
+                    .HomeButtonOverlay {
+                        background-color: #171616;
+                        transform: translateX(100%);
+                        transform-origin: left;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        transition: all 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+                        z-index: 2;
+                    }
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        stroke: white;
+                        z-index: 3;
+
+                    }
+                }
+
+                button:active {
+                    transform: scale(0.95);
+                }
+
+
+                button:hover {
+                    .HomeButtonOverlay {
+                        transform: translateY(0);
+
+                    }
+                }
+
+            }
+
+            .RightHeroContainerDetails {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5em;
+
+                h1 {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: -3%;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.HeroContainerLower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 20vh;
+}
+
+.HeroContainerMarquee {
+
+    -webkit-user-select: none;
+    user-select: none;
+    width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+
+    overflow: hidden;
+    background-color: #171616;
+    color: white;
+
+    border-top: solid 3px #fe4d1d;
+    border-bottom: solid 3px #fe4d1d;
+
+    padding: 18px 0;
+    transform: rotate(-2.5deg) scaleY(0);
+
+
+
+}
+
+.HeroMarqueeTrack {
+    display: flex;
+    width: max-content;
+
+    animation: heroMarquee 10s linear infinite;
+}
+
+.HeroMarqueeItem {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding-right: 30px;
+
+    white-space: nowrap;
+}
+
+.HeroMarqueeItem span:first-child {
+    font-size: clamp(28px, 0.56vw, 48px);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+.HeroMarqueeDot {
+    font-size: 12px;
+}
+
+@keyframes heroMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-40%);
+    }
+}
+
+
+
+.ExtraHeroContainer {
+    min-height: 20vh;
+    width: 100%;
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+
+    h1 {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 21px;
+        letter-spacing: 0%;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        p {
+            position: absolute;
+            font-weight: 600;
+            font-size: 26px;
+            text-transform: none;
+            left: 15%;
+            bottom: -30%;
+            text-decoration: underline 2px black;
+        }
+    }
+
+    span {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -6%;
+        width: 60%;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: end;
+    }
+}
+
+
+
+
+
+ @media (max-width: 599px) {
+
+    .Hero {
+        padding-top: 5em;
+        width: 100%;
+        min-height: 70vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .Hero .HeroContainer {
+        width: 100%;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ROLE */
+
+    .Hero .HeroContainer .HeroContainerUpper .HeroContainerRole {
+        width: 100%;
+        padding: 0.25em;
+
+        display: flex;
+        flex-direction: column;
+
+        line-height: 0.85;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerRole .HeroContainerFirstRol,
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerRole .HeroContainerLastRol {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerRole .HeroContainerFirstRol h1,
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerRole .HeroContainerLastRol h1 {
+        width: 100%;
+        margin: 0;
+
+        font-size: clamp(64px, 25vw, 110px);
+        font-weight: 500;
+
+        letter-spacing: -0.08em;
+        line-height: 0.85;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+
+    /* DETAILS */
+
+    .Hero .HeroContainer .HeroContainerUpper .HeroContainerDetails {
+        width: 100%;
+        padding: 0 1.25rem;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 1em;
+    }
+
+
+    /* LEFT */
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .LeftHeroContainerDetails {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 1em;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .LeftHeroContainerDetails p {
+        width: 100%;
+        max-width: 340px;
+
+        margin: 0;
+
+        font-size: clamp(13px, 3.5vw, 14px);
+        line-height: 1.15;
+        font-weight: 500;
+
+        align-self: center;
+        text-align: center;
+    }
+
+
+    /* BUTTON */
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .LeftHeroContainerDetails button {
+        /* width: clamp(125px, 36vw, 135px); */
+        width: 100%;
+        height: clamp(42px, 11vw, 44px);
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.6rem;
+
+        background-color: #fe4d1d;
+        color: white;
+
+        border: none;
+        border-radius: 0;
+
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .LeftHeroContainerDetails button h1 {
+        margin: 0;
+
+        font-size: clamp(9px, 2.5vw, 10px);
+        font-weight: 500;
+        line-height: 1;
+
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+
+        position: relative;
+        z-index: 3;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .LeftHeroContainerDetails button svg {
+        width: 14px;
+        height: 14px;
+
+        flex-shrink: 0;
+
+        stroke: white;
+
+        position: relative;
+        z-index: 3;
+    }
+
+
+    /* RIGHT */
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .RightHeroContainerDetails {
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        gap: 0.5rem;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .RightHeroContainerDetails svg {
+        width: clamp(25px, 9vw, 35px);
+        height: 1px;
+
+        flex-shrink: 0;
+    }
+
+    .Hero .HeroContainer .HeroContainerUpper
+    .HeroContainerDetails .RightHeroContainerDetails h1 {
+        margin: 0;
+
+        font-size: clamp(10px, 3vw, 12px);
+        font-weight: 600;
+
+        line-height: 1;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+
+
+    /* MARQUEE */
+
+    .Hero .HeroContainer .HeroContainerLower {
+        width: 100%;
+        min-height: 15dvh;
+
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Hero .HeroContainer .HeroContainerLower .HeroContainerMarquee {
+        width: 120%;
+        margin-left: -10%;
+        margin-right: -10%;
+
+        padding: 12px 0;
+
+        overflow: hidden;
+
+        background-color: #171616;
+        color: white;
+
+        border-top: 2px solid #fe4d1d;
+        border-bottom: 2px solid #fe4d1d;
+
+        transform: rotate(-2.5deg) scaleY(0);
+        transform-origin: right;
+    }
+
+    .Hero .HeroContainer .HeroContainerLower
+    .HeroContainerMarquee .HeroMarqueeTrack {
+        display: flex;
+        width: max-content;
+
+        animation: heroMarqueeMobile 9s linear infinite;
+    }
+
+    .Hero .HeroContainer .HeroContainerLower
+    .HeroContainerMarquee .HeroMarqueeItem {
+        display: flex;
+        align-items: center;
+
+        gap: 18px;
+        padding-right: 18px;
+
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .Hero .HeroContainer .HeroContainerLower
+    .HeroContainerMarquee .HeroMarqueeItem span {
+        font-size: clamp(17px, 5vw, 20px);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -0.04em;
+    }
+
+    .Hero .HeroContainer .HeroContainerLower
+    .HeroContainerMarquee .HeroMarqueeItem b {
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    @keyframes heroMarqueeMobile {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-40%);
+        }
+    }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   600px - 1024px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .Hero {
+        width: 100%;
+        min-height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    /* ================================
+       HERO CONTAINER
+    ================================= */
+
+    .HeroContainer {
+        width: 100%;
+        min-height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    /* ================================
+       UPPER
+    ================================= */
+
+    .HeroContainerUpper {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    /* ================================
+       ROLE
+    ================================= */
+
+    .HeroContainerRole {
+        width: 100% !important;
+
+        padding: 0 1.5em !important;
+
+        display: flex;
+        flex-direction: column;
+
+        line-height: 0.82 !important;
+    }
+
+
+    .HeroContainerFirstRol,
+    .HeroContainerLastRol {
+        width: 100% !important;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    .HeroContainerFirstRol h1,
+    .HeroContainerLastRol h1 {
+
+        width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(100px, 16vw, 155px) !important;
+
+        font-weight: 500;
+
+        letter-spacing: -0.08em !important;
+
+        line-height: 0.82;
+
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+
+
+    /* FIRST WORD */
+
+    .HeroContainerFirstRol {
+        justify-content: flex-start;
+    }
+
+    .HeroContainerFirstRol h1 {
+        text-align: left;
+    }
+
+
+    /* SECOND WORD */
+
+    .HeroContainerLastRol {
+        justify-content: flex-end;
+    }
+
+    .HeroContainerLastRol h1 {
+        text-align: right;
+
+        padding: 0 0.03em 0 0 !important;
+    }
+
+
+    /* ================================
+       DETAILS
+    ================================= */
+
+    .HeroContainerDetails {
+        width: 100%;
+
+        padding: 0 1.5em !important;
+
+        margin-top: 2.5em;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: 2em;
+    }
+
+
+    /* LEFT DETAILS */
+
+    .LeftHeroContainerDetails {
+        width: 35% !important;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.25em !important;
+    }
+
+
+    .LeftHeroContainerDetails p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(14px, 1.8vw, 17px) !important;
+
+        line-height: 1.15;
+
+        font-weight: 500 !important;
+
+        letter-spacing: -0.03em !important;
+    }
+
+
+    /* BUTTON */
+
+    .LeftHeroContainerDetails button {
+        width: 140px !important;
+        height: 46px !important;
+
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.65em;
+
+        transform: scaleY(0);
+
+        transform-origin: bottom;
+    }
+
+
+    .LeftHeroContainerDetails button h1 {
+        font-size: 11px !important;
+
+        font-weight: 500;
+
+        line-height: 1;
+    }
+
+
+    .LeftHeroContainerDetails button svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+
+    /* ================================
+       RIGHT DETAILS
+    ================================= */
+
+    .RightHeroContainerDetails {
+        width: auto;
+
+        display: flex;
+
+        justify-content: flex-end;
+        align-items: center;
+
+        gap: 0.5em;
+    }
+
+
+    .RightHeroContainerDetails h1 {
+        margin: 0;
+
+        font-size: clamp(13px, 1.7vw, 17px) !important;
+
+        font-weight: 600;
+
+        line-height: 1;
+
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+
+
+    /* ================================
+       LOWER / MARQUEE
+    ================================= */
+
+    .HeroContainerLower {
+        width: 100%;
+
+        min-height: 18dvh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    .HeroContainerMarquee {
+        width: 112%;
+
+        margin-left: -6%;
+        margin-right: -6%;
+
+        padding: 15px 0;
+
+        overflow: hidden;
+
+        border-top: 2px solid #fe4d1d;
+        border-bottom: 2px solid #fe4d1d;
+
+        transform: rotate(-2.5deg) scaleY(0);
+
+        transform-origin: right;
+    }
+
+
+    .HeroMarqueeTrack {
+        display: flex;
+
+        width: max-content;
+
+        animation: heroMarqueeTablet 10s linear infinite;
+    }
+
+
+    .HeroMarqueeItem {
+        display: flex;
+
+        align-items: center;
+
+        gap: 22px;
+
+        padding-right: 22px;
+
+        flex-shrink: 0;
+
+        white-space: nowrap;
+    }
+
+
+    .HeroMarqueeItem span:first-child {
+        font-size: clamp(22px, 3.5vw, 32px);
+
+        font-weight: 400;
+
+        line-height: 1;
+
+        letter-spacing: -0.04em;
+    }
+
+
+    .HeroMarqueeDot {
+        font-size: 10px;
+    }
+
+
+    @keyframes heroMarqueeTablet {
+
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-40%);
+        }
+
+    }
+
+
+    /* ================================
+       EXTRA HERO
+    ================================= */
+
+    .ExtraHeroContainer {
+        width: 100%;
+
+        min-height: 15vh;
+
+        margin-bottom: 3em;
+
+        padding: 2em 1.5em;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    .ExtraHeroContainer h1 {
+        font-size: clamp(15px, 2vw, 19px);
+
+        gap: 0.75em;
+    }
+
+
+    .ExtraHeroContainer h1 p {
+        font-size: clamp(18px, 2.5vw, 24px);
+
+        left: 10%;
+        bottom: -30%;
+    }
+
+
+    .ExtraHeroContainer span {
+        width: 55%;
+
+        font-size: clamp(26px, 4vw, 38px);
+
+        line-height: 1;
+
+        text-align: end;
+    }
+
+}

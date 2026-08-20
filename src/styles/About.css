@@ -1,0 +1,1394 @@
+/* .About {
+    width: 100%;
+    min-height: 100vh;
+    scrollbar-width: none;
+}
+
+.AboutHeader {
+    min-height: 20dvh;
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+
+    h1 {
+        display: flex;
+        gap: 2em;
+        padding: 0em 0em 0em 0.8em;
+        font-size: 200px;
+        text-transform: uppercase;
+        letter-spacing: -9%;
+        line-height: 190px;
+
+        span {
+            padding: 0em 0em 0em 0.1em;
+            ;
+            font-size: 200px;
+            text-transform: uppercase;
+            letter-spacing: -9%;
+            line-height: 190px;
+
+        }
+    }
+
+}
+
+.AboutMain {
+    background-color: #171616;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.About {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+
+
+
+
+
+.HorizontalSection .content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+
+}
+
+
+
+
+.HorizontalSection {
+    display: flex;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.AboutPageContainerOne {
+    height: 100dvh;
+    width: 100%;
+    background-color: #171616;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+
+    .AboutPageContainer {
+        height: 100dvh;
+        width: 100%;
+        background-color: #171616;
+        display: flex;
+
+        .LeftAboutContainer {
+            pointer-events: none;
+            width: 50%;
+            height: 100%;
+        }
+
+        .RightAboutContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5em;
+
+            p {
+                width: 100%;
+                font-size: 110px;
+                line-height: 110px;
+                font-weight: bold;
+                color: white
+            }
+
+            .spanone {
+                color: #adadad;
+            }
+
+            .spantwo {
+                color: #fe4d1d;
+            }
+
+        }
+    }
+}
+
+
+.AboutPageContainerTwo {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: white;
+
+    pointer-events: none;
+
+
+    .LeftAboutPageContainerTwo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        p{
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: justify;
+            padding: 2em;
+
+            span{
+                color: #fe4d1d;
+            }
+        }
+
+
+
+    }
+
+
+    .RightAboutPageContainerTwo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 1em;
+
+        .ImgOverlay{
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            border: transparent;
+            background-color: #171616;
+        }
+        img{
+            object-fit: cover;
+            height: 50%;
+            width: 100%;
+        }
+    }
+
+}
+
+
+.AboutPageContainerThree {
+    width: 100%;
+    height: 110vh;
+
+    background-color: #171616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .AboutPageContainerThreeContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+
+        .AboutPageContainerThreeContentOne {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2em 3em;
+
+
+            p {
+                font-weight: 300;
+                font-size: 70px;
+                line-height: 66px;
+                text-transform: uppercase;
+                color: #adadad;
+                width: 50%;
+                letter-spacing: 4%;
+
+                span {
+                    color: #fe4d1d;
+                }
+            }
+
+        }
+
+        .AboutPageContainerThreeContentTwo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.50em;
+            color: white;
+
+            p {
+                width: 25%;
+                text-align: center;
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+
+        .AboutPageContainerThreeContentThree {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .ThreeContentThreeHeader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.50em;
+
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 21px;
+                    font-weight: 600;
+                    color: #adadad
+                }
+
+            }
+
+            .ThreeContentThreePara {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 0em 2em;
+
+
+                .ContentThreeParaHeader {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5em;
+                    position: relative;
+
+                    .svg {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    h1 {
+                        text-transform: uppercase;
+                        font-size: 21px;
+                        font-weight: 500;
+                        color: #fe4d1d;
+                        letter-spacing: 2%;
+                        cursor: pointer;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: normal;
+                    color: white;
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VERTICAL OVERLAY */
+
+.AboutMain {
+    width: 100%;
+    background-color: #171616;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+
+
+.AboutHeader {
+    min-height: 20dvh;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: white;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.AboutHeader h1 {
+    display: flex;
+    gap: 2em;
+
+    padding: 0 0 0 0.8em;
+
+    font-size: 200px;
+    line-height: 190px;
+
+    text-transform: uppercase;
+    letter-spacing: -9%;
+}
+
+.AboutHeader h1 span {
+    padding-left: 0.1em;
+
+    font-size: 200px;
+    line-height: 190px;
+
+    text-transform: uppercase;
+    letter-spacing: -9%;
+}
+
+
+
+
+.About {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    background-color: #171616;
+
+    scrollbar-width: none;
+}
+
+
+
+
+.VerticalOverlaySection {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+
+
+.AboutPageContainerOne {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #171616;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.AboutPageContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.LeftAboutContainer {
+    width: 50%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+.RightAboutContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 5em;
+}
+
+.RightAboutContainer p {
+    width: 100%;
+
+    font-size: 110px;
+    line-height: 110px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.RightAboutContainer .spanone {
+    color: #adadad;
+}
+
+.RightAboutContainer .spantwo {
+    color: #fe4d1d;
+}
+
+
+.AboutPageContainerTwo {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #171616;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    ;
+    justify-content: space-evenly;
+
+    will-change: transform;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+
+
+.LeftAboutPageContainerTwo {
+    width: 50%;
+    height: 100%;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    justify-content: center;
+    align-items: flex-end;
+
+
+
+
+}
+
+.LeftAboutPageContainerTwo {
+
+    .LeftAboutPageContainerTwoOne {
+        border: solid 2px green;
+        width: 100%;
+        align-self: flex-end;
+
+
+        P {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .LeftAboutPageContainerTwoTwo {
+        border: solid 2px yellow;
+        width: 100%;
+        align-self: flex-end;
+
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .LeftAboutPageContainerTwoThree {
+        border: solid 2px violet;
+
+        width: 100%;
+        align-self: flex-end;
+
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+
+
+
+}
+
+.LeftAboutPageContainerTwo p {
+    width: 100%;
+    /* padding: 2em; */
+
+    font-size: 40px;
+    line-height: 1.15;
+
+    font-weight: 300;
+
+    text-align: justify;
+
+    text-transform: uppercase;
+
+    color: white;
+
+}
+
+.LeftAboutPageContainerTwo p span {
+    color: #fe4d1d;
+}
+
+/* 
+
+.RightAboutPageContainerTwo {
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.RightAboutPageContainerTwo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+} */
+
+
+.RightAboutPageContainerTwo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 3em;
+
+    .ImgOverlay {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        border: transparent;
+        background-color: #171616;
+    }
+
+    img {
+        object-fit: cover;
+        height: 50%;
+        width: 50%;
+    }
+}
+
+
+
+
+
+.AboutPageContainerThree {
+    width: 100%;
+    height: 110vh;
+
+    background-color: #171616;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+
+.AboutPageContainerThreeSvg {
+    width: 100%;
+}
+
+.AboutPageContainerThreeSvg svg {
+    width: 95%;
+    height: 1.5px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.AboutPageContainerThreeContent {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1em;
+}
+
+
+
+
+.AboutPageContainerThreeContentOne {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 2em 3em;
+}
+
+.AboutPageContainerThreeContentOne p {
+    width: 50%;
+
+    font-size: 70px;
+    line-height: 66px;
+
+    font-weight: 300;
+
+    text-transform: uppercase;
+
+    color: #adadad;
+
+    letter-spacing: 4%;
+}
+
+.AboutPageContainerThreeContentOne p span {
+    color: #fe4d1d;
+}
+
+
+
+.AboutPageContainerThreeContentTwo {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5em;
+
+    color: white;
+}
+
+.AboutPageContainerThreeContentTwo p {
+    width: 25%;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    text-align: center;
+}
+
+
+.AboutPageContainerThreeContentThree {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1em;
+}
+
+
+
+.ThreeContentThreeHeader {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    gap: 0.5em;
+}
+
+.ThreeContentThreeHeader h1 {
+    font-size: 21px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    color: #adadad;
+}
+
+
+
+
+.ThreeContentThreePara {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 0 2em;
+}
+
+
+
+.ContentThreeParaHeader {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: all;
+    gap: 0.5em;
+}
+
+.ContentThreeParaHeader h1 {
+    font-size: 21px;
+
+    font-weight: 500;
+
+    letter-spacing: 2%;
+
+    text-transform: uppercase;
+
+    color: #fe4d1d;
+
+    cursor: pointer;
+}
+
+.ContentThreeParaHeader .svg {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.ThreeContentThreePara p {
+    width: 50%;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    font-weight: normal;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+
+    .AboutHeader h1,
+    .AboutHeader h1 span {
+        font-size: 140px;
+        line-height: 130px;
+    }
+
+    .RightAboutContainer p {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .AboutPageContainerThreeContentOne p {
+        font-size: 55px;
+        line-height: 55px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .AboutHeader {
+        min-height: 15dvh;
+    }
+
+    .AboutHeader h1,
+    .AboutHeader h1 span {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .AboutPageContainerOne {
+        height: 100vh;
+    }
+
+    .AboutPageContainer {
+        flex-direction: column;
+    }
+
+    .LeftAboutContainer {
+        display: none;
+    }
+
+    .RightAboutContainer {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .RightAboutContainer p {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+
+    .AboutPageContainerTwo {
+        flex-direction: column;
+    }
+
+    .LeftAboutPageContainerTwo {
+        width: 100%;
+        height: 50%;
+    }
+
+    .LeftAboutPageContainerTwo p {
+        padding: 1.5em;
+
+        font-size: 25px;
+    }
+
+    .RightAboutPageContainerTwo {
+        width: 100%;
+        height: 50%;
+    }
+
+
+    .AboutPageContainerThree {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .AboutPageContainerThreeContentOne {
+        padding: 2em;
+    }
+
+    .AboutPageContainerThreeContentOne p {
+        width: 100%;
+
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .AboutPageContainerThreeContentTwo p {
+        width: 80%;
+
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .ThreeContentThreePara {
+        flex-direction: column;
+
+        gap: 3em;
+
+        align-items: flex-start;
+    }
+
+    .ThreeContentThreePara p {
+        width: 100%;
+
+        text-align: left;
+    }
+}
+
+@media (max-width: 599px) {
+    .AboutMain {
+        margin-top: 2em;
+    }
+
+    /* =========================================
+       ABOUT HEADER
+    ========================================= */
+
+    .AboutHeader {
+        width: 100%;
+        min-height: 15dvh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .AboutHeader h1 {
+        width: max-content;
+
+        display: flex;
+
+        gap: 1em;
+        padding: 0;
+
+        font-size: clamp(58px, 30vw, 160px) !important;
+        line-height: 0.9 !important;
+
+        letter-spacing: -0.08em !important;
+
+        white-space: nowrap;
+    }
+
+    .AboutHeader h1 span {
+        padding-left: 0.05em;
+
+        font-size: inherit;
+        line-height: inherit;
+
+        letter-spacing: inherit;
+    }
+
+
+    /* =========================================
+       ABOUT MAIN
+    ========================================= */
+
+    .About {
+        width: 100%;
+        min-height: 100vh;
+
+        overflow: hidden;
+    }
+
+    .AboutMain {
+        width: 100%;
+    }
+
+
+    /* =========================================
+       VERTICAL OVERLAY
+    ========================================= */
+
+    .VerticalOverlaySection {
+        width: 100%;
+        height: 100vh;
+
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    /* =========================================
+       CONTAINER ONE
+    ========================================= */
+
+    .AboutPageContainerOne {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+
+        inset: 0;
+    }
+
+    .AboutPageContainer {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LeftAboutContainer {
+        display: none;
+    }
+
+    .RightAboutContainer {
+        width: 100%;
+        height: 100%;
+
+        padding: 1.5em;
+
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+    .RightAboutContainer p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(38px, 11vw, 200px);
+        line-height: 0.95;
+
+        font-weight: bold;
+
+        text-align: left;
+    }
+
+
+    /* =========================================
+       CONTAINER TWO
+    ========================================= */
+
+    .AboutPageContainerTwo {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        position: absolute;
+
+        inset: 0;
+    }
+
+
+    /* =========================================
+       LEFT CONTENT
+    ========================================= */
+
+    .LeftAboutPageContainerTwo {
+        width: 100%;
+        height: 55%;
+
+        padding: 1.5em;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 1.25em;
+    }
+
+
+    .LeftAboutPageContainerTwoOne,
+    .LeftAboutPageContainerTwoTwo,
+    .LeftAboutPageContainerTwoThree {
+        width: 100%;
+
+        border: none !important;
+
+        align-self: center;
+    }
+
+
+    .LeftAboutPageContainerTwo p {
+        width: 100%;
+
+        padding: 0;
+
+        margin: 0;
+
+        font-size: clamp(21px, 6vw, 28px);
+
+        line-height: 1.05;
+
+        font-weight: 300;
+
+        text-align: center;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .RightAboutPageContainerTwo {
+        width: 100%;
+        height: 45%;
+
+        padding: 1.5em;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .RightAboutPageContainerTwo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+    .RightAboutPageContainerTwo .ImgOverlay {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        background-color: #171616;
+
+        border: none;
+    }
+
+
+    /* =========================================
+       CONTAINER THREE
+    ========================================= */
+
+    .AboutPageContainerThree {
+        width: 100%;
+        height: auto;
+
+        min-height: 100vh;
+
+        padding-bottom: 4em;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* =========================================
+       SVG
+    ========================================= */
+
+    .AboutPageContainerThreeSvg {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .AboutPageContainerThreeSvg svg {
+        width: 90%;
+        height: 1px;
+
+        margin: 0 auto;
+
+        display: block;
+    }
+
+
+    /* =========================================
+       THREE CONTENT ONE
+    ========================================= */
+
+    .AboutPageContainerThreeContent {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 3em;
+    }
+
+
+    .AboutPageContainerThreeContentOne {
+        width: 100%;
+
+        padding: 2.5em 1.5em 1em;
+
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .AboutPageContainerThreeContentOne p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(34px, 10vw, 48px);
+
+        line-height: 0.95;
+
+        font-weight: 300;
+
+        letter-spacing: 0 !important;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       THREE CONTENT TWO
+    ========================================= */
+
+    .AboutPageContainerThreeContentTwo {
+        width: 100%;
+
+        padding: 0 1.5em;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.75em;
+    }
+
+    .AboutPageContainerThreeContentTwo p {
+        width: 90%;
+
+        margin: 0;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* =========================================
+       THREE CONTENT THREE
+    ========================================= */
+
+    .AboutPageContainerThreeContentThree {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2em;
+    }
+
+
+    /* HEADER */
+
+    .ThreeContentThreeHeader {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.4em;
+    }
+
+    .ThreeContentThreeHeader h1 {
+        margin: 0;
+
+        font-size: 17px;
+
+        line-height: 1;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       THREE CONTENT PARAGRAPH
+    ========================================= */
+
+    .ThreeContentThreePara {
+        width: 100%;
+
+        padding: 0 1.5em;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 2em;
+    }
+
+
+    .ContentThreeParaHeader {
+        width: max-content;
+
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 0.5em;
+    }
+
+    .ContentThreeParaHeader h1 {
+        margin: 0;
+
+        font-size: 17px;
+
+        line-height: 1;
+
+        font-weight: 500;
+
+        letter-spacing: 0 !important;
+
+        text-transform: uppercase;
+    }
+
+
+    .ContentThreeParaHeader .svg {
+        bottom: -3px;
+        left: 0;
+    }
+
+
+    .ThreeContentThreePara p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        font-weight: 400;
+
+        text-align:center;
+    }
+
+}
+
+
+
+
+
+
+

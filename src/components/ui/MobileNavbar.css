@@ -1,0 +1,333 @@
+.MobileNavbar {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .DesktopNavbar {
+        display: none;
+    }
+
+
+
+    .MobileNavbar {
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        min-height: 10vh;
+
+        z-index: 600;
+
+
+        mix-blend-mode: difference;
+        color: #fff;
+        visibility: hidden;
+    }
+
+
+    .MobileNavbar.MobileNavbarReady {
+        visibility: visible;
+    }
+
+
+    .MobileNavbarContainer {
+        width: 100%;
+        min-height: 10vh;
+
+        padding: 0 1.2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+     
+        box-sizing: border-box;
+    }
+
+
+
+    .MobileLogo,
+    .MobileMenuButton {
+        border: none;
+        outline: none;
+        background: transparent;
+
+        padding: 0;
+        margin: 0;
+
+
+        font-family: "Spline Sans Mono", monospace;
+
+        cursor: pointer;
+        
+    }
+
+
+    .MobileLogo {
+        font-size: 1rem;
+
+        font-weight: 600;
+
+        letter-spacing: -0.07em;
+
+        line-height: 1;
+        color: inherit;
+   
+
+    }
+
+
+
+    .MobileMenuButton {
+        position: relative;
+
+        width: 60px;
+        height: 20px;
+
+        padding: 0 0.1em;
+
+        overflow: hidden;
+
+        font-size: 1.2rem;
+
+        font-weight: 200;
+
+        letter-spacing: -0.08em;
+
+        line-height: 20px;
+
+
+        text-align: right;
+
+    }
+
+
+
+    .MenuText,
+    .CloseText {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        width: 100%;
+
+        height: 20px;
+
+        line-height: 20px;
+
+        white-space: nowrap;
+        color: #fff;
+    }
+
+
+    .MenuText {
+        z-index: 2;
+        padding: 0em 0.2em;
+    }
+
+
+    .CloseText {
+        z-index: 1;
+    }
+
+
+
+    .MenuText .char,
+    .CloseText .char {
+        display: inline-block;
+    }
+
+    .MobileMenuPanel {
+        visibility: visible;
+        position: fixed;
+        inset: 0;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100svh;
+        background: white;
+        z-index: 500;
+        overflow: hidden;
+
+
+
+    }
+
+    .MobileMenuPanel.menuOpen {
+        transform: translateY(0%);
+    }
+
+    .MobileMenuSheet {
+        width: 100%;
+        height: 100%;
+
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+
+
+        .MobileMenuSheetOne{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 0.5em 1em;
+            margin-top: 3em;
+
+
+            .SheetOneContents{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                .LeftSheetOneContents{
+                    width: 100%;
+                    display: none;
+                }
+
+                .RightSheetOneContents{
+                    width: 100%;
+                    p{
+                        letter-spacing: 10%;
+                    }
+                }
+            }
+        }
+
+        .MobileMenuSheetTwo{
+            width: 100%;
+
+            .SheetTwoContents{
+                padding: 0em 1em;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+
+                    list-style: none;
+
+                    li{
+                        cursor: pointer;
+                        /* font-size: 4rem; */
+                        font-size: clamp(4rem, 4.5rem, 5rem);
+                        font-weight: 600;
+                        letter-spacing: -0.08em;
+                    }
+                }
+            }
+        }
+
+        .MobileMenuSheetThree{
+            width: 100%;
+            /* border: solid 2px gold; */
+
+            .SheetThreeContents{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                gap: 2em;
+
+                .TopSheetThreeContents{
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        list-style: none;
+                        padding: 0em 1em;
+
+                        li{
+                            cursor: pointer;
+
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+
+                .MiddleSheetThreeContents{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1;
+
+                }
+
+                .BottomSheetThreeContents{
+                    width: 100%;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0em 1em;
+                        list-style: none;
+
+
+                        li{
+                            .LeftMostBottomSheetThreeContents, .MiddleMostBottomSheetThreeContents, .RightMostBottomSheetThreeContents{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+                                h1{
+                                    font-size: 11px;
+                                }
+                                h2{
+                                    font-size: 9px;
+                                }
+                            }
+
+                            .RightMostBottomSheetThreeContents{
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                            }
+
+                            .MiddleMostBottomSheetThreeContents{
+                                h1{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

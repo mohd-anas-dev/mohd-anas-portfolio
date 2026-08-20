@@ -1,0 +1,761 @@
+.Services {
+    width: 100%;
+
+}
+
+.ServicesHeader {
+    background-color: #fff;
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+
+    h1 {
+        padding: 0 .50em 0em 0.8em;
+        font-size: 200px;
+        text-transform: uppercase;
+        letter-spacing: -9%;
+        line-height: 200px;
+    }
+}
+
+
+
+.ServicesContainer {
+    /* min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; */
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.ServicesContainerOne:nth-child(1) {
+    z-index: 1;
+    border-top: transparent;
+}
+
+.ServicesContainerOne:nth-child(2) {
+    z-index: 2;
+}
+
+.ServicesContainerOne:nth-child(3) {
+    z-index: 3;
+}
+
+.ServicesContainerOne:nth-child(4) {
+    z-index: 4;
+}
+
+.ServicesContainerOne {
+    /* min-height: 100vh;
+    width: 100%;
+    background-color: #171616;
+    display: flex; */
+
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 100%;
+
+    background-color: #171616;
+
+    display: flex;
+
+    position: absolute;
+
+    inset: 0;
+
+    will-change: transform;
+
+
+}
+
+
+.LeftServicesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2em;
+
+    color: white;
+
+    .TopLeftServicesContainer {
+        /* display: flex;
+        flex-direction: column;
+        gap: 0.5em; */
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2em;
+
+        .TopLeftServiceHeader {
+            display: flex;
+            align-items: center;
+            gap: 2.5em;
+
+
+            svg {
+                height: 35px;
+                width: 35px;
+                stroke: #fe4d1d;
+                fill: #fe4d1d;
+                animation: svganim 2s linear 0s infinite;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 80px;
+                letter-spacing: -5%;
+                font-weight: 400;
+                word-spacing: 10%;
+                text-decoration: underline 2.5px #fe4d1d;
+                text-underline-offset: 5px;
+            }
+
+        }
+
+        .TopLeftServicePointers {
+            min-height: 70px;
+            display: flex;
+            align-items: flex-start;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25em;
+
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 0em 0.5em;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.25em;
+
+                    span {
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+
+                    h1 {
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        letter-spacing: -4%;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .BottomLeftServicesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em;
+        width: 70%;
+
+        .BottomLeftServicesContainerTags {
+            width: 100%;
+            min-width: 0;
+            -webkit-user-select: auto;
+            user-select: all;
+            cursor: pointer;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                width: 100%;
+
+
+                li {
+                    list-style: none;
+                    color: #adadad;
+                    padding: 0.25em 0.75em;
+                    border-radius: 15px;
+                    border: solid 2px #adadad;
+                    flex: 0 0 auto;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .BottomLeftServicesContainerPara {
+            display: flex;
+
+            p {
+                font-size: 31px;
+                text-align: justify;
+                letter-spacing: -4%;
+            }
+        }
+    }
+
+
+}
+
+.ServicesContainer {
+    perspective: 1500px;
+}
+
+.RightServicesContainer {
+    display: flex;
+    width: 50%;
+
+    flex-direction: column;
+
+    .TopRightServicesContainer {
+        width: 100%;
+        height: 50%;
+    }
+
+    .BottomRightServicesContainer {
+        display: flex;
+        width: 100%;
+        height: 50%;
+
+
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: white;
+            font-size: 400px;
+            letter-spacing: -6%;
+        }
+    }
+}
+
+
+@keyframes svganim {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.MyMissionContainer {
+    min-height: 50vh;
+    width: 100%;
+
+    display: flex;
+    padding: 2.5em;
+    background-color: #fff;
+
+
+    .MyMissionContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 2em;
+
+        .missionheader {
+            align-self: flex-start;
+
+            h1 {
+                font-size: 19px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+
+        p {
+            font-size: 70px;
+            line-height: 70px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: -3%;
+
+        }
+    }
+}
+
+
+
+
+
+.Services {
+    width: 100%;
+
+}
+
+.ServicesHeader {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+
+    h1 {
+        padding: 0 .50em 0em 0.8em;
+        font-size: 200px;
+        text-transform: uppercase;
+        letter-spacing: -9%;
+        line-height: 200px;
+    }
+}
+
+
+
+.ServicesContainer {
+    /* min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; */
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.ServicesContainerOne:nth-child(1) {
+    z-index: 1;
+    border-top: transparent;
+}
+
+.ServicesContainerOne:nth-child(2) {
+    z-index: 2;
+}
+
+.ServicesContainerOne:nth-child(3) {
+    z-index: 3;
+}
+
+.ServicesContainerOne:nth-child(4) {
+    z-index: 4;
+}
+
+.ServicesContainerOne {
+    /* min-height: 100vh;
+    width: 100%;
+    background-color: #171616;
+    display: flex; */
+
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 100%;
+
+    background-color: #171616;
+
+    display: flex;
+
+    position: absolute;
+
+    inset: 0;
+
+    will-change: transform;
+
+
+}
+
+
+.LeftServicesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2em;
+
+    color: white;
+
+    .TopLeftServicesContainer {
+        /* display: flex;
+        flex-direction: column;
+        gap: 0.5em; */
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2em;
+
+        .TopLeftServiceHeader {
+            display: flex;
+            align-items: center;
+            gap: 2.5em;
+
+
+            svg {
+                height: 35px;
+                width: 35px;
+                stroke: #fe4d1d;
+                fill: #fe4d1d;
+                animation: svganim 2s linear 0s infinite;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 80px;
+                letter-spacing: -5%;
+                font-weight: 400;
+                word-spacing: 10%;
+                text-decoration: underline 2.5px #fe4d1d;
+                text-underline-offset: 5px;
+            }
+
+        }
+
+        .TopLeftServicePointers {
+            min-height: 70px;
+            display: flex;
+            align-items: flex-start;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25em;
+
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 0em 0.5em;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.25em;
+
+                    span {
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+
+                    h1 {
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        letter-spacing: -4%;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .BottomLeftServicesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em;
+        width: 70%;
+
+        .BottomLeftServicesContainerTags {
+            width: 100%;
+            min-width: 0;
+            -webkit-user-select: auto;
+            user-select: all;
+            cursor: pointer;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                width: 100%;
+
+
+                li {
+                    list-style: none;
+                    color: #adadad;
+                    padding: 0.25em 0.75em;
+                    border-radius: 15px;
+                    border: solid 2px #adadad;
+                    flex: 0 0 auto;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .BottomLeftServicesContainerPara {
+            display: flex;
+
+            p {
+                font-size: 31px;
+                text-align: justify;
+                letter-spacing: -4%;
+            }
+        }
+    }
+
+
+}
+
+.ServicesContainer {
+    perspective: 1500px;
+}
+
+.RightServicesContainer {
+    display: flex;
+    width: 50%;
+
+    flex-direction: column;
+
+    .TopRightServicesContainer {
+        width: 100%;
+        height: 50%;
+    }
+
+    .BottomRightServicesContainer {
+        display: flex;
+        width: 100%;
+        height: 50%;
+
+
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: white;
+            font-size: 400px;
+            letter-spacing: -6%;
+        }
+    }
+}
+
+
+@keyframes svganim {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.MyMissionContainer {
+    min-height: 50vh;
+    width: 100%;
+
+    display: flex;
+    padding: 2.5em;
+
+
+    .MyMissionContent {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 2em;
+
+        .missionheader {
+            align-self: flex-start;
+
+            h1 {
+                font-size: 19px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+
+        p {
+            font-size: 70px;
+            line-height: 70px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: -3%;
+
+        }
+    }
+}
+
+
+@media (max-width: 599px) {
+
+    .ServicesHeader{
+        width: 100%;
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-size: clamp(70px, 30vw, 160px);
+            line-height: 0.85;
+            letter-spacing: -0.08em;
+            width: max-content;
+            padding: 0em;
+        }
+    }
+
+
+    .ServicesContainer {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .ServicesContainerOne {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        justify-content: space-around;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer {
+        width: 100%;
+        padding: 1.75em 1.25em;
+        gap: 2.5em;
+        border: none;
+    }
+
+    .LeftServicesContainer {
+        min-height: 100vh;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5em !important;
+        justify-content: space-around !important;
+    }
+     .TopLeftServiceHeader {
+        h1{
+            letter-spacing: -0.03em !important;;
+        }
+     }
+
+
+    .BottomLeftServicesContainerTags{
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .BottomLeftServicesContainerTags ul li:nth-child(n + 6) {
+        display: none;
+    }
+
+
+    .ServicesContainerOne .RightServicesContainer {
+        display: none !important;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer {
+        gap: 1.75em;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServiceHeader {
+        gap: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServiceHeader svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServiceHeader h1 {
+        font-size: 60px;
+        line-height: 1.15;
+        letter-spacing: normal;
+        word-spacing: normal;
+        font-weight: 400;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServicePointers {
+        min-height: auto;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServicePointers ul {
+        gap: 0.6em;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServicePointers ul li {
+        gap: 0.9em;
+        padding: 0;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServicePointers ul li span,
+    .ServicesContainerOne .LeftServicesContainer .TopLeftServicesContainer .TopLeftServicePointers ul li h1 {
+        font-size: 14px;
+        letter-spacing: normal;
+        font-weight: 300;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .BottomLeftServicesContainer {
+        width: 100%;
+        gap: 1.75em;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .BottomLeftServicesContainer .BottomLeftServicesContainerTags ul {
+        gap: 0.6em;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .BottomLeftServicesContainer .BottomLeftServicesContainerTags ul li.Tags {
+        font-size: 13px;
+        padding: 0.4em 0.9em;
+        border-width: 1.5px;
+        border-radius: 20px;
+    }
+
+    .ServicesContainerOne .LeftServicesContainer .BottomLeftServicesContainer .BottomLeftServicesContainerPara p {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: normal;
+        border: none;
+    }
+
+
+    .MyMissionContainer {
+        min-height: 20vh;
+        padding: 1.5em;
+    }
+
+    .MyMissionContainer .MyMissionContent {
+        gap: 1.25em;
+    }
+
+    .MyMissionContainer .MyMissionContent .missionheader h1 {
+        font-size: 14px;
+    }
+
+    .MyMissionContainer .MyMissionContent p {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+
+
+

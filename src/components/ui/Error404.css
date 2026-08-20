@@ -1,0 +1,308 @@
+/* .Error404{
+    width: 100%;
+    border: solid 2px yellow;
+}
+
+.Error404Container{
+    min-height: 100vh;
+    border: solid 2px red;
+
+    position: relative;
+    z-index: 3;
+
+}
+
+.BackgroundError404Container{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    background-color: #171616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px green;
+    pointer-events: none;
+
+    h1{
+        font-size: 125vh;
+        font-weight: 800;
+        border: solid 2px yellow;
+        line-height: 100vh;
+        color: #adadad;
+        opacity: 0.1;
+        letter-spacing: -4%;
+    }
+}
+
+.OverlayError404Container{
+
+    width: 100%;
+    background-color: rebeccapurple;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+
+
+    .BottomOverlayError404Container{
+        h1{
+            font-size: 50px;
+            color: red;;
+        }
+    }
+} */
+
+
+.Error404 {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.Error404Container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.BackgroundError404Container {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background-color: #171616;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    pointer-events: none;
+
+
+}
+
+.BackgroundError404Container h1 {
+    margin: 0;
+    font-size: 125vh;
+    line-height: 1;
+
+    font-weight: 900;
+    color: white;
+    opacity: 0.1;
+
+    letter-spacing: 0%;
+}
+
+
+.OverlayError404Container {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+
+.BottomOverlayError404Container h1 {
+    font-size: 50px;
+    color: red;
+}
+
+.BottomOverlayError404Container {
+    width: 100%;
+}
+
+.Marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: transparent;
+    border: solid 2px #fe4d1d;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.MarqueeTrack {
+    display: flex;
+    width: max-content;
+    animation: marquee 15s linear infinite alternate-reverse;
+}
+
+.MarqueeGroup {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.MarqueeTool {
+    flex-shrink: 0;
+    padding: 10px 3px;
+}
+
+.MarqueeTool h2 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fe4d1d;
+    font-weight: 300;
+
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.Void {
+    width: 100%;
+    min-height: 55dvh;
+    display: flex;
+
+    .LeftVoid {
+        width: 100%;
+        gap: 1.5em;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+
+
+        h1 {
+            font-size: 12px;
+            font-weight: 200;
+            color: #fe4d1d
+        }
+
+        .VoidText {
+            line-height: 110px;
+
+            .you {
+                font-size: 120px;
+                font-weight: 900;
+                letter-spacing: -5%;
+                color: white;
+            }
+
+            .void {
+                color: #fe4d1d;
+                font-size: 120px;
+                font-weight: 900;
+                letter-spacing: -5%;
+            }
+
+
+        }
+    }
+
+    .RightVoid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 2.5em;
+        padding: 2em;
+
+        p {
+            font-size: 21px;
+            color: #adadad;
+            line-height: 30px;
+        }
+
+        .voidBtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.5em;
+
+            button {
+                background-color: transparent;
+                border: solid 2px #fe4d1d;
+                border-radius: 50px;
+                height: 50px;
+                padding: 0em 1.75em;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: -3%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.75em;
+                overflow: hidden;
+                transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+                position: relative;
+
+                h1{
+                    color: white;
+                }
+            }
+
+            .ButtonOverlay {
+                width: 100%;
+                border-radius: 50px;
+                height: 50px;
+                padding: 0em 1.75em;
+                transform: translateY(100%);
+                background-color: #171616;
+                transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+                visibility: hidden;
+                position: absolute;
+
+                inset: 0;
+                z-index: 0;
+
+            }
+
+            button:hover {
+                .ButtonOverlay {
+                    transform: translateY(0%);
+                    visibility: visible;
+                }
+            }
+
+
+            h1 {
+                font-size: 14px;
+                color: #adadad;
+                opacity: 1;
+            }
+        }
+
+        .voidBtn button>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .voidBtn button:hover .ButtonOverlay {
+            transform: translateY(0);
+        }
+    }
+}

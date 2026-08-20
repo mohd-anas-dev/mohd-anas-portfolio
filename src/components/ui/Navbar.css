@@ -1,0 +1,467 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+html,body{
+    position: relative;
+}
+
+
+.Navbar {
+    min-height: 10vh;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    
+    
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    
+    padding: 0em 2em;
+    mix-blend-mode: difference;
+    z-index: 600;
+    
+}
+
+
+.Navbar{
+    visibility: hidden;
+}
+.Navbar.NavBarLoaderReady{
+    visibility: visible;
+}
+
+.NavbarContainer {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+.NavbarContainer {
+  color: #fff;
+}
+
+.oneNavbar ul li,
+.secondNavbar li {
+  color: #fff;
+}
+
+.oneNavbar ul li a:hover {
+  color: inherit;
+}
+
+.secondNavbar li a .navDot path {
+  stroke: currentColor;
+}
+.LeftNavbar {
+    width: 100%;
+
+    h1 {
+        font-size: 26px;
+        letter-spacing: -9%;
+        font-weight: 600;
+        
+        cursor: pointer;
+        color: #fff;
+        font-family: "Spline Sans Mono", monospace;
+    }
+}
+
+.RightNavbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    align-items: flex-end;
+
+    .oneNavbar {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5em;
+
+            li {
+                list-style: none;
+                color: inherit;
+                font-weight: 500;
+
+                a {
+                    text-decoration: none;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+
+
+                    h1{
+                        font-size: 11px;
+                        color: #fff;
+                        font-weight: 300;
+                        font-family: "Spline Sans Mono", monospace;
+                    }
+
+                    h2{
+                        font-size: 15px;
+                        color: #fff;
+                        font-weight: 300;
+                        display: flex;
+                        letter-spacing: -1%;
+                        font-family: "Spline Sans Mono", monospace;
+
+
+                    }
+                }
+
+                a:hover{
+                    font-weight: 600;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .secondNavbar {
+        li {
+            list-style: none;
+            color: inherit;
+            font-weight: 600;
+            font-size: 18px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5em;
+                font-weight: 300;
+                position: relative;
+                font-family: "Spline Sans Mono", monospace;
+                letter-spacing: -3%;
+
+                .navDot{
+
+                    height: 6px;
+                    width: 6px;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    path{
+                        stroke: currentColor;
+                    }
+                }
+
+
+            }
+
+
+            
+
+        }
+    }
+}
+
+.ContactLink{
+    position: relative;
+    width: 100%;
+    padding: 0.1em;
+    h1{
+        font-weight: 500;
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: -5%;
+        font-family: "Spline Sans Mono", monospace;
+    }
+}
+
+.ContactLine{
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+
+.h1Contact{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+.ContactArrow{
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+}
+
+.ContactLink:hover{
+
+    .ContactArrow{
+        transform: rotate(45deg);
+    }
+}
+
+
+.DesktopNavbar{
+    display: block;
+}
+
+.MobileNavbarWrapper{
+    display: none;
+}
+
+
+
+
+@media (max-width: 599px) {
+    .DesktopNavbar{
+        display: none;
+    }
+
+    .MobileNavbarWrapper{
+        display: block;
+    }
+    
+} */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+html, body {
+    position: relative;
+}
+
+.Navbar {
+    min-height: 10vh;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    padding: 0 clamp(1em, 2vw, 2em);
+    mix-blend-mode: difference;
+    z-index: 600;
+    visibility: hidden;
+}
+
+.Navbar.NavBarLoaderReady {
+    visibility: visible;
+}
+
+.NavbarContainer {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-between; /* Gives natural spacing between left logo and right menu */
+    align-items: flex-end;
+    color: #fff;
+}
+
+.oneNavbar ul li,
+.secondNavbar li {
+    color: #fff;
+}
+
+.oneNavbar ul li a:hover {
+    color: inherit;
+}
+
+.secondNavbar li a .navDot path {
+    stroke: currentColor;
+}
+
+/* =================================
+   LEFT NAVBAR (LOGO)
+================================= */
+.LeftNavbar {
+    width: auto;
+    flex-shrink: 0;
+
+    h1 {
+        /* Max 26px on laptops, scales down slightly on smaller screens */
+        font-size: clamp(20px, 1.8vw, 26px);
+        letter-spacing: -0.07em;
+        font-weight: 600;
+        white-space: nowrap;
+        cursor: pointer;
+        color: #fff;
+        font-family: "Spline Sans Mono", monospace;
+    }
+}
+
+/* =================================
+   RIGHT NAVBAR (LINKS & CONTACT)
+================================= */
+.RightNavbar {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: clamp(1.5em, 3vw, 4em);
+    padding: 0;
+
+    .oneNavbar {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* 5em on laptops, smoothly shrinks on smaller screens */
+            gap: clamp(1.5em, 3.5vw, 5em);
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                color: inherit;
+                font-weight: 500;
+
+                a {
+                    text-decoration: none;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    white-space: nowrap;
+
+                    h1 {
+                        font-size: 11px;
+                        color: #fff;
+                        font-weight: 300;
+                        font-family: "Spline Sans Mono", monospace;
+                        margin: 0;
+                    }
+
+                    h2 {
+                        /* Exact 15px on laptops, scales down gracefully */
+                        font-size: clamp(12px, 1.1vw, 15px);
+                        color: #fff;
+                        font-weight: 300;
+                        display: flex;
+                        letter-spacing: -0.01em;
+                        font-family: "Spline Sans Mono", monospace;
+                        white-space: nowrap; /* Prevents "ABOUT ME" from breaking */
+                        margin: 0;
+                    }
+                }
+
+                a:hover {
+                    font-weight: 600;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .secondNavbar {
+        li {
+            list-style: none;
+            color: inherit;
+            font-weight: 600;
+            font-size: 18px;
+            white-space: nowrap;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5em;
+                font-weight: 300;
+                position: relative;
+                font-family: "Spline Sans Mono", monospace;
+                letter-spacing: -0.03em;
+                white-space: nowrap;
+
+                .navDot {
+                    height: 6px;
+                    width: 6px;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    path {
+                        stroke: currentColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ContactLink {
+    position: relative;
+    width: 100%;
+    padding: 0.1em;
+    white-space: nowrap;
+
+    h1 {
+        font-weight: 500;
+        color: #fff;
+        /* Exact 18px on laptops */
+        font-size: clamp(14px, 1.3vw, 18px);
+        letter-spacing: -0.05em;
+        font-family: "Spline Sans Mono", monospace;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+
+.ContactLine {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.h1Contact {
+    /* Exact 20px on laptops */
+    font-size: clamp(15px, 1.4vw, 20px);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ContactArrow {
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+}
+
+.ContactLink:hover .ContactArrow {
+    transform: rotate(45deg);
+}
+
+/* =================================
+   RESPONSIVE SWITCHING
+================================= */
+.DesktopNavbar {
+    display: block;
+}
+
+.MobileNavbarWrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Optional: Switch to Mobile navbar at tablet width (768px) if preferred */
+}
+
+@media (max-width: 600px) {
+    .DesktopNavbar {
+        display: none;
+    }
+
+    .MobileNavbarWrapper {
+        display: block;
+    }
+}

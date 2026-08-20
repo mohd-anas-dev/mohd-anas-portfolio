@@ -1,0 +1,1416 @@
+.Footer {
+    width: 100%;
+}
+
+.EmailMeButton {
+    position: relative;
+    width: 180px;
+    height: 60px;
+
+    overflow: hidden;
+
+    border: 1px solid #d9d9d9;
+    background: transparent;
+
+    color: #adadad;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+}
+
+
+/* DEFAULT */
+
+.EmailMeDefault {
+    position: relative;
+    z-index: 2;
+
+    font-size: 16px;
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    transition: opacity 0.25s ease;
+}
+
+
+/* MARQUEE */
+
+.EmailMeMarquee {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #adadad;
+    color: #171616;
+
+    transition:
+        opacity 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+        visibility 0.4s;
+
+    text-transform: uppercase;
+}
+
+
+/* TRACK */
+
+.EmailMeMarqueeTrack {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    animation: EmailMeMarqueeMove 7s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* ITEMS */
+
+.EmailMeMarqueeItem {
+    display: inline-flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+/* SVG */
+
+.WhatsAppMarqueeIcon {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+
+    margin: 0 10px;
+
+    display: block;
+
+    overflow: visible;
+
+    color: #171616;
+}
+
+
+/* HOVER */
+
+.EmailMeButton:hover .EmailMeDefault {
+    opacity: 0;
+}
+
+.EmailMeButton:hover .EmailMeMarquee {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ANIMATION */
+
+@keyframes EmailMeMarqueeMove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.FooterContainer {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #171616;
+    color: white;
+
+    display: flex;
+    gap: 7em;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .TopFooterContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+
+        .LeftTopFooterContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+
+            p {
+                width: 100%;
+                font-size: 60px;
+                font-weight: 200;
+                letter-spacing: -3%;
+                line-height: 70px;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+
+            button {
+                width: 150px;
+                height: 40px;
+                border-radius: 20px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        }
+
+        .RightTopFooterContainer {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: 0.80em;
+
+                li {
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 1em;
+                    cursor: pointer;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+
+                    }
+
+                    svg {
+                        transform-origin: right;
+                        transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+                        rect {
+                            transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+                        }
+                    }
+
+                    h1 {
+                        font-weight: 200;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+
+                    }
+
+                }
+
+            }
+
+            li:hover {
+                svg {
+                    width: 90px !important;
+
+                    rect {
+                        width: 70px !important;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    .BottomFooterContainer {
+        display: flex;
+        flex-direction: column;
+
+        .BottomFooterContainerName {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+
+            h1 {
+                width: 100%;
+                text-align: center;
+                font-size: 200px;
+                text-transform: uppercase;
+                letter-spacing: -7%;
+                -webkit-user-select: none;
+                user-select: none;
+                line-height: 200px;
+            }
+        }
+
+        .BottomFooterContainerDescription {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 6px;
+            padding: 1em 3em;
+            -webkit-user-select: none;
+            user-select: none;
+
+            .LeftBottomFooterContainerDescription {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5em;
+
+                .LeftBottomDescContent {
+                    display: flex;
+                    gap: 5em;
+
+                    .BottomFooterDescOne {
+                        h1 {
+                            color: #adadad;
+                            font-size: 14px;
+                        }
+
+                        h2 {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .BottomFooterDescTwo {
+                        h1 {
+                            color: #adadad;
+                            font-size: 14px;
+                        }
+
+                        h2 {
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                .RightsReserved {
+                    h1 {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .RightBottomFooterContainerDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .Availbleforwork {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.50em;
+
+                h1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 16px;
+                }
+
+                svg {
+                    animation: green 0.85s infinite linear;
+                }
+            }
+
+            .Freelance {
+                h1 {
+                    font-size: 12px;
+                    color: #adadad;
+
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes green {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* 
+@media (max-width: 599px) {
+
+    .Footer {
+        width: 100%;
+    }
+
+    .FooterContainer {
+        width: 100%;
+        min-height: 50dvh;
+        height: auto;
+
+        gap: 4em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+
+
+    .FooterContainer .TopFooterContainer {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 3em;
+
+        padding: 1.25em;
+        box-sizing: border-box;
+    }
+
+
+
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5em;
+    }
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer p {
+        width: 100%;
+
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: -0.04em;
+        font-weight: 200;
+        margin: 0;
+    }
+
+
+
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer .EmailMeButton {
+        width: 100%;
+        height: 40px;
+
+        flex-shrink: 0;
+    }
+
+    .EmailMeDefault {
+        font-size: 14px;
+    }
+
+    .EmailMeMarqueeItem {
+        font-size: 10px;
+    }
+
+    .WhatsAppMarqueeIcon {
+        width: 14px;
+        height: 14px;
+
+        margin: 0 8px;
+    }
+
+
+
+
+    .FooterContainer .TopFooterContainer .RightTopFooterContainer {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+
+        left: 0;
+
+        bottom: calc(
+            1.25em +
+            0.85 * clamp(55px, 17vw, 110px) +
+            3.5em
+        );
+
+        z-index: 5;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul {
+
+        width: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 1.25em;
+
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li {
+
+        width: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 0;
+
+        cursor: pointer;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li h1 {
+
+        font-size: 20px;
+
+        font-weight: 200;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+        text-transform: uppercase;
+    }
+
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li svg {
+
+        display: none;
+    }
+
+
+
+    .FooterContainer .BottomFooterContainer {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2em;
+
+        position: relative;
+    }
+
+
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerName {
+
+        width: 100%;
+
+        min-height: auto;
+
+        overflow: hidden;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerName h1 {
+
+        width: max-content;
+
+        font-size: clamp(55px, 17vw, 110px);
+
+        line-height: 0.85;
+
+        letter-spacing: -0.08em;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+        margin: 0;
+    }
+
+
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerDescription {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        gap: 1em;
+
+        padding: 0 1.25em 1.25em;
+
+        box-sizing: border-box;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerDescription
+    .LeftBottomFooterContainerDescription {
+
+        width: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: flex-end;
+
+        gap: 2.5em;
+
+        flex-shrink: 0;
+    }
+
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .LeftBottomDescContent {
+
+        width: auto;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: flex-end !important;
+
+        gap: 2.5em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomDescContent
+    .BottomFooterDescOne,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomDescContent
+    .BottomFooterDescTwo {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0.25em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescOne h1,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescTwo h1 {
+
+        font-size: 11px !important;
+
+        color: #adadad;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescOne h2,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescTwo h2 {
+
+        font-size: 12px !important;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .RightsReserved {
+
+        display: flex;
+
+        align-items: flex-end;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .RightsReserved h1 {
+
+        font-size: 10px !important;
+
+        margin: 0;
+
+        font-weight: 400;
+
+        white-space: nowrap;
+
+        color: #adadad;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription {
+
+        width: auto !important;
+
+        display: flex !important;
+
+        flex-direction: column;
+
+        align-items: flex-end !important;
+
+        justify-content: flex-end;
+
+        gap: 0.25em;
+
+        flex-shrink: 0;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Availbleforwork {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        gap: 0.5em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Availbleforwork h1 {
+
+        font-size: 13px;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Freelance h1 {
+
+        font-size: 11px;
+
+        margin: 0;
+
+        color: #adadad;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+ */
+
+@media (max-width: 599px) {
+
+    .Footer {
+        width: 100%;
+    }
+
+    .FooterContainer {
+        width: 100%;
+        min-height: 50dvh;
+        height: auto;
+
+        gap: 4em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+
+    /* =========================
+       TOP FOOTER
+       ========================= */
+
+    .FooterContainer .TopFooterContainer {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 3em;
+
+        padding: 1.25em;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       LEFT TOP
+       ========================= */
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5em;
+    }
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer p {
+        width: 100%;
+
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: -0.04em;
+        font-weight: 200;
+        margin: 0;
+    }
+
+
+    /* =========================
+       WHATSAPP BUTTON
+       ========================= */
+
+    .FooterContainer .TopFooterContainer .LeftTopFooterContainer .EmailMeButton {
+        width: 100%;
+        height: 40px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       DEFAULT LET'S TALK
+       ========================= */
+
+    .EmailMeDefault {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+
+        z-index: 2;
+
+        opacity: 1;
+
+        /*
+            0 - 5s  : visible
+            5 - 8s  : fade out
+            8 - 13s : visible again
+        */
+
+        animation:
+            LetsTalkDefault
+            13s
+            cubic-bezier(0.65, 0, 0.35, 1)
+            infinite;
+    }
+
+
+    /* =========================
+       MARQUEE
+       ========================= */
+
+    .EmailMeMarquee {
+
+        opacity: 0;
+
+        visibility: visible;
+
+        /*
+            0 - 5s  : hidden
+            5 - 8s  : visible
+            8 - 13s : hidden
+        */
+
+        animation:
+            LetsTalkMarquee
+            13s
+            cubic-bezier(0.65, 0, 0.35, 1)
+            infinite;
+    }
+
+
+    .EmailMeMarqueeItem {
+        font-size: 10px;
+    }
+
+
+    .WhatsAppMarqueeIcon {
+        width: 14px;
+        height: 14px;
+
+        margin: 0 8px;
+    }
+
+
+    /* =========================
+       LET'S TALK TIMING
+
+       0s  ─────── 5s
+             TALK
+
+       5s ─── 8s
+             MARQUEE
+
+       8s ─────── 13s
+             TALK
+
+       THEN REPEAT
+       ========================= */
+
+    @keyframes LetsTalkDefault {
+
+        /* 0 → 5 seconds */
+        0%,
+        38.46% {
+            opacity: 1;
+        }
+
+        /* smooth fade out */
+        42%,
+        61.5% {
+            opacity: 0;
+        }
+
+        /* smooth fade back in */
+        65%,
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    @keyframes LetsTalkMarquee {
+
+        /* hidden */
+        0%,
+        38.46% {
+            opacity: 0;
+        }
+
+        /* smooth fade in */
+        42%,
+        61.5% {
+            opacity: 1;
+        }
+
+        /* smooth fade out */
+        65%,
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    /* =========================
+       REMOVE HOVER CONTROL
+       ========================= */
+
+    .EmailMeButton:hover .EmailMeDefault {
+        opacity: 1;
+    }
+
+    .EmailMeButton:hover .EmailMeMarquee {
+        opacity: initial;
+    }
+
+
+    /* =========================
+       SOCIAL LINKS
+
+       Moves UL directly above
+       MOHAMMED ANAS
+       ========================= */
+
+    .FooterContainer .TopFooterContainer .RightTopFooterContainer {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+
+        left: 0;
+
+        bottom: calc(
+            1.25em +
+            0.85 * clamp(55px, 17vw, 110px) +
+            3.5em
+        );
+
+        z-index: 5;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul {
+
+        width: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 1.25em;
+
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li {
+
+        width: auto;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 0;
+
+        cursor: pointer;
+    }
+
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li h1 {
+
+        font-size: 20px;
+
+        font-weight: 200;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+        text-transform: uppercase;
+    }
+
+
+    /* Hide little SVG lines */
+
+    .FooterContainer
+    .TopFooterContainer
+    .RightTopFooterContainer ul li svg {
+        display: none;
+    }
+
+
+    /* =========================
+       BOTTOM FOOTER
+       ========================= */
+
+    .FooterContainer .BottomFooterContainer {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2em;
+
+        position: relative;
+    }
+
+
+    /* =========================
+       MOHAMMED ANAS
+       ========================= */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerName {
+
+        width: 100%;
+
+        min-height: auto;
+
+        overflow: hidden;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerName h1 {
+
+        width: max-content;
+
+        font-size: clamp(55px, 17vw, 110px);
+
+        line-height: 0.85;
+
+        letter-spacing: -0.08em;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       BOTTOM INFORMATION
+       ========================= */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerDescription {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        gap: 1em;
+
+        padding: 0 1.25em 1.25em;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       LEFT INFORMATION
+       ========================= */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterContainerDescription
+    .LeftBottomFooterContainerDescription {
+
+        width: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: flex-end;
+
+        gap: 2.5em;
+
+        flex-shrink: 0;
+    }
+
+
+    /* DESIGN + BASED IN */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .LeftBottomDescContent {
+
+        width: auto;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: flex-end !important;
+
+        gap: 2.5em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomDescContent
+    .BottomFooterDescOne,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomDescContent
+    .BottomFooterDescTwo {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0.25em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescOne h1,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescTwo h1 {
+
+        font-size: 11px !important;
+
+        color: #adadad;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescOne h2,
+
+    .FooterContainer
+    .BottomFooterContainer
+    .BottomFooterDescTwo h2 {
+
+        font-size: 12px !important;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       RIGHTS RESERVED
+       ========================= */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .RightsReserved {
+
+        display: flex;
+
+        align-items: flex-end;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .LeftBottomFooterContainerDescription
+    .RightsReserved h1 {
+
+        font-size: 10px !important;
+
+        margin: 0;
+
+        font-weight: 400;
+
+        white-space: nowrap;
+
+        color: #adadad;
+    }
+
+
+    /* =========================
+       AVAILABILITY
+       ========================= */
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription {
+
+        width: auto !important;
+
+        display: flex !important;
+
+        flex-direction: column;
+
+        align-items: flex-end !important;
+
+        justify-content: flex-end;
+
+        gap: 0.25em;
+
+        flex-shrink: 0;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Availbleforwork {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        gap: 0.5em;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Availbleforwork h1 {
+
+        font-size: 13px;
+
+        margin: 0;
+
+        white-space: nowrap;
+    }
+
+
+    .FooterContainer
+    .BottomFooterContainer
+    .RightBottomFooterContainerDescription
+    .Freelance h1 {
+
+        font-size: 11px;
+
+        margin: 0;
+
+        color: #adadad;
+
+        white-space: nowrap;
+    }
+
+}

@@ -1,0 +1,395 @@
+.Process {
+    width: 100%;
+    margin: 4em 0em;
+    background-color: #fff;
+}
+
+.ProcessContainer {
+    background-color: #fff;
+    min-height: 100vh;
+    -webkit-user-select: none;
+
+    user-select: none;
+
+
+    .ProcessContainerOne {
+        display: flex;
+        height: 50vh;
+        justify-content: left;
+        gap: 0.75em;
+        padding: 0.50em 2em;
+
+
+        .ProcessStep {
+            width: 25%;
+            background-color: #171616;
+            color: #fe4d1d;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            border-top-left-radius: 500px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            text-transform: uppercase;
+            padding: 0.25em 2em;
+
+            h1 {
+                font-weight: 400;
+                font-size: 3rem;
+                letter-spacing: -6%;
+                line-height: 0.85;
+            }
+        }
+
+        .Debrief {
+            border: solid 2px #171616;
+            width: 25%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 20px;
+            padding: 1em 2em;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+            h1 {
+                font-weight: 400;
+                color: #171616;
+            }
+
+            p {
+                font-size: 18px;
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+            }
+
+        }
+
+        .Debrief:hover {
+            background-color: #171616;
+            color: white;
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    .ProcessContainerTwo {
+        display: flex;
+        height: 50vh;
+        justify-content: center;
+        gap: 0.75em;
+        padding: 0.50em 2em;
+
+        .Research,
+        .Ideation {
+            border: solid 2px #171616;
+            width: 25%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 20px;
+            padding: 1em 2em;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+            h1 {
+                font-weight: 400;
+                color: #171616;
+            }
+
+            p {
+                font-size: 18px;
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+            }
+
+        }
+
+        .Research:hover {
+            background-color: #171616;
+            color: white;
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                opacity: 1;
+            }
+        }
+
+        .Ideation:hover {
+            background-color: #171616;
+            color: white;
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .ProcessContainerThree {
+        display: flex;
+        height: 50vh;
+        justify-content: space-around;
+        gap: 0.75em;
+        padding: 0.50em 2em;
+
+        .Development {
+            border: solid 2px #171616;
+            width: 25%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 20px;
+            padding: 1em 2em;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+            h1 {
+                font-weight: 400;
+                color: #171616;
+            }
+
+            p {
+                font-size: 18px;
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+            }
+        }
+
+        .Development:hover {
+            background-color: #171616;
+            color: white;
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                opacity: 1;
+            }
+        }
+
+        .ProcessStep {
+            width: 25%;
+            background-color: #171616;
+            color: #fe4d1d;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 500px;
+            text-transform: uppercase;
+            padding: 0.25em 2em;
+        }
+    }
+
+}
+
+
+
+
+
+@media (max-width: 599px) {
+
+    .ProcessContainer {
+
+
+        .ProcessContainerOne {
+            width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+
+            .ProcessStep {
+                width: 100%;
+                height: 100%;
+            }
+
+            .Debrief {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .ProcessContainerTwo {
+            width: 100%;
+            min-height: 100vh;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+
+            .Research,
+            .Ideation {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .ProcessContainerThree {
+            width: 100%;
+            min-height: 100vh;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+
+            .Development{
+                width: 100%;
+                height: 100%;
+            }
+
+            .ProcessStep{
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+    }
+
+
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .ProcessContainer {
+
+        .ProcessContainerOne {
+            width: 100%;
+            height: 45vh;
+            min-height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+
+            gap: 0.75em;
+            padding: 0.5em 1.25em;
+
+            .ProcessStep {
+                width: 25%;
+                height: auto;
+                flex: 1;
+                padding: 0.5em 1em;
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+
+            .Debrief {
+                width: 25%;
+                height: auto;
+                flex: 1;
+                padding: 1em 1.25em;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .ProcessContainerTwo {
+            width: 100%;
+            height: 45vh;
+            min-height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+
+            gap: 0.75em;
+            padding: 0.5em 1.25em;
+
+            .Research,
+            .Ideation {
+                width: 25%;
+                height: auto;
+                flex: 1;
+                padding: 1em 1.25em;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .ProcessContainerThree {
+            width: 100%;
+            height: 45vh;
+            min-height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: stretch;
+
+            gap: 0.75em;
+            padding: 0.5em 1.25em;
+
+            .Development {
+                width: 25%;
+                height: auto;
+                flex: 1;
+                padding: 1em 1.25em;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            .ProcessStep {
+                width: 25%;
+                height: auto;
+                flex: 1;
+                padding: 0.5em 1em;
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+    }
+
+}
