@@ -110,7 +110,7 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/mohd-anas-dev/mohd-anas-portfolio.git
 ```
 
 ### 2. Navigate into the project
@@ -230,8 +230,8 @@ Creative Full Stack Developer
 Sharjah, UAE
 
 * **Portfolio:** [your-live-domain.com](https://your-live-domain.com)
-* **GitHub:** [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-* **LinkedIn:** [linkedin.com/in/YOUR_USERNAME](https://linkedin.com/in/YOUR_USERNAME)
+* **GitHub:** [github.com/YOUR_USERNAME](https://github.com/mohd-anas-dev/)
+* **LinkedIn:** [linkedin.com/in/YOUR_USERNAME](https://www.linkedin.com/in/md-anasdev/)
 
 ---
 
