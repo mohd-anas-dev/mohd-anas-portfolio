@@ -2,7 +2,7 @@
 
 > A creative developer portfolio focused on high-performance web experiences, modern interfaces, and interactive motion.
 
-**Live Website:** [your-live-domain.com](https://your-live-domain.com)
+**Live Website:** [https://](https://your-live-domain.com)
 
 ---
 
