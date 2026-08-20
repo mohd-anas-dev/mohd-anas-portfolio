@@ -230,8 +230,8 @@ Creative Full Stack Developer
 Sharjah, UAE
 
 * **Portfolio:** [your-live-domain.com](https://your-live-domain.com)
-* **GitHub:** [github.com/YOUR_USERNAME](https://github.com/mohd-anas-dev/)
-* **LinkedIn:** [linkedin.com/in/YOUR_USERNAME](https://www.linkedin.com/in/md-anasdev/)
+* **GitHub:** [github.com/mohd-anas-dev](https://github.com/mohd-anas-dev/)
+* **LinkedIn:** [linkedin.com/in/md-anasdev](https://www.linkedin.com/in/md-anasdev/)
 
 ---
 
